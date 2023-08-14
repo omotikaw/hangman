@@ -9,6 +9,7 @@ class Scraper:
     def scrape(self):
         r = urllib.request.urlopen(self.site)
         html = r.read()
+        print(r)
         parser = "html.parser"
         sp = BeautifulSoup(html, parser)
         for tag in sp.find_all("a"):
@@ -18,5 +19,5 @@ class Scraper:
             if "html" in url:
                 print("\n" + url)
 
-news = "https://news.google.com/"
+news = "http://www.linksyu.com/"
 Scraper(news).scrape()
