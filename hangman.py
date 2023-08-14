@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 class Scraper:
     def __init__(self, site):
         self.site = site
+        print("hey")
 
     def scrape(self):
         r = urllib.request.urlopen(self.site)
